@@ -1,0 +1,73 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Dars Jadvali{% endblock title %}
+{% block content %}
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
+body {
+  margin:0;
+  font: 600 18px 'Source Sans Pro', sans-serif;
+  letter-spacing: 0.64px;
+  color: #585d74;
+}
+
+
+
+.mycard {
+  background-color: #f1f1f1;
+  background-image: linear-gradient(to bottom, #375BDC, #4D70EF);
+  background-size: 100% 130px;
+  background-repeat: no-repeat;
+  margin: 40px auto;
+  width: 350px;
+  border-radius: 5px;
+  box-shadow: 0 5px 7px -1px rgba(51, 51, 51, 0.23);
+  padding: 20px;
+}
+.mycard h1 {
+  text-align: center;
+  color:#ffffff;
+  margin:20px 0 60px 0;
+}
+
+.li{
+  background-color: #ffffff;
+  background-image: linear-gradient(to right, #375BDC, #4D70EF);
+  background-size: 50px 60px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: transform .25s;
+  border-radius: 5px;
+  box-shadow: 0 5px 7px -1px rgba(51, 51, 51, 0.23);
+  padding: 15px;
+  padding-left: 70px;
+  margin-top: 5px;
+}
+.li:hover {
+  transform: scale(1.1);
+}
+.a:link, .a:visited {
+  color: #375BDC;
+}
+
+</style>
+  <div class="mycard">
+    <h1>Sinfningizni tanlang</h1>
+    <ul style="list-style-type: none">
+        <li><h5 style="display: inline-block">1-Sinf</h5><a href="/1-sinf/A" ><button style="margin-left: 10px" type="button" class="btn btn-outline-info">A</button></a><a href="/1-sinf/B" ><button style="margin-left: 10px"type="button" class="btn btn-outline-info">B</button></a><a href="/1-sinf/D" ><button style="margin-left: 10px"type="button" class="btn btn-outline-info">D</button></a></li>
+        <li><h5 style="display: inline-block">2-Sinf</h5><a href="/1-sinf/A" ><button style="margin-left: 10px"type="button" class="btn btn-outline-info">A</button></a><a href="/2-sinf/B" ><button style="margin-left: 10px"type="button" class="btn btn-outline-info">B</button></a><a href="/2-sinf/D" ><button style="margin-left: 10px"type="button" class="btn btn-outline-info">D</button></a></li>
+        <li><h5 style="display: inline-block">3-Sinf</h5><a href="/1-sinf/A" ><button style="margin-left: 10px"type="button" class="btn btn-outline-info">A</button></a><a href="/3-sinf/B" ><button style="margin-left: 10px"type="button" class="btn btn-outline-info">B</button></a><a href="/3-sinf/D" ><button style="margin-left: 10px"type="button" class="btn btn-outline-info">D</button></a></li>
+        <li><h5 style="display: inline-block">4-Sinf</h5><a href="/1-sinf/A" ><button style="margin-left: 10px"type="button" class="btn btn-outline-info">A</button></a><a href="/4-sinf/B" ><button style="margin-left: 10px"type="button" class="btn btn-outline-info">B</button></a><a href="/4-sinf/D" ><button style="margin-left: 10px"type="button" class="btn btn-outline-info">D</button></a></li>
+        <li><h5 style="display: inline-block">5-Sinf</h5><a href="/1-sinf/A" ><button style="margin-left: 10px"type="button" class="btn btn-outline-info">A</button></a><a href="/5-sinf/B" ><button style="margin-left: 10px"type="button" class="btn btn-outline-info">B</button></a><a href="/5-sinf/D" ><button style="margin-left: 10px"type="button" class="btn btn-outline-info">D</button></a></li>
+        <li><h5 style="display: inline-block">6-Sinf</h5><a href="/1-sinf/A" ><button style="margin-left: 10px"type="button" class="btn btn-outline-info">A</button></a><a href="/6-sinf/B" ><button style="margin-left: 10px"type="button" class="btn btn-outline-info">B</button></a><a href="/6-sinf/D" ><button style="margin-left: 10px"type="button" class="btn btn-outline-info">D</button></a></li>
+        <li><h5 style="display: inline-block">7-Sinf</h5><a href="/1-sinf/A" ><button style="margin-left: 10px"type="button" class="btn btn-outline-info">A</button></a><a href="/7-sinf/B" ><button style="margin-left: 10px"type="button" class="btn btn-outline-info">B</button></a><a href="/7-sinf/D" ><button style="margin-left: 10px"type="button" class="btn btn-outline-info">D</button></a></li>
+        <li><h5 style="display: inline-block">8-Sinf</h5><a href="/1-sinf/A" ><button style="margin-left: 10px"type="button" class="btn btn-outline-info">A</button></a><a href="/8-sinf/B" ><button style="margin-left: 10px"type="button" class="btn btn-outline-info">B</button></a><a href="/8-sinf/D" ><button style="margin-left: 10px"type="button" class="btn btn-outline-info">D</button></a></li>
+        <li><h5 style="display: inline-block">9-Sinf</h5><a href="/1-sinf/A" ><button style="margin-left: 10px"type="button" class="btn btn-outline-info">A</button></a><a href="/9-sinf/B" ><button style="margin-left: 10px"type="button" class="btn btn-outline-info">B</button></a><a href="/9-sinf/D" ><button style="margin-left: 10px"type="button" class="btn btn-outline-info">D</button></a></li>
+        <li><h5 style="display: inline-block">10-Sinf</h5><a href="/1-sinf/A" ><button type="button" class="btn btn-outline-info">A</button></a><a href="/10-sinf/B" ><button style="margin-left: 10px"type="button" class="btn btn-outline-info">B</button></a><a href="/10-sinf/D" ><button style="margin-left: 10px"type="button" class="btn btn-outline-info">D</button></a></li>
+        <li><h5 style="display: inline-block">11-Sinf</h5><a href="/1-sinf/A" ><button type="button" class="btn btn-outline-info">A</button></a><a href="/11-sinf/B" ><button style="margin-left: 10px"type="button" class="btn btn-outline-info">B</button></a><a href="/11-sinf/D" ><button style="margin-left: 10px"type="button" class="btn btn-outline-info">D</button></a></li>
+
+
+    </ul>
+  </div>
+{% endblock %}

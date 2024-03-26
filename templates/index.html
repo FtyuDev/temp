@@ -1,0 +1,191 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<html>
+<head>
+<title>Dars jadvali</title>
+<style>
+*{
+padding:0px;
+margin:0px;
+}
+body{
+background:#D2DBE5;
+font-family:arial;
+}
+font{
+font-weight:bold;
+font-size:16px;
+}
+ul{
+position:absolute;
+right:560px;
+list-style:none;
+margin:20px 0px;
+width:200px;
+height:200px;
+}
+li{
+text-indent:20px;
+border:1px solid black;
+border-radius:6px;
+font-size:30px;
+color:white;
+text-shadow:-1.2px 0px 2px #80B0FD,-2.4px 0px 2.5px #5D80B8,-3.6px 0px 2px black;
+height:32px;
+width:360px;
+margin:4px 0px;
+padding:12px;
+background:#4285F4;
+}
+li:hover{
+background:#1F3F72;
+border-color:#98CBF0;
+color:white;
+box-shadow: 0 2px 10px 0 rgba(0,0,0,0.2),0 4px 16px 0 rgba(0,0,0,0.19);
+}
+#kun{
+text-align:center;
+text-indent:0px;
+background:#1F3F72;
+color:white;
+border-color:#98CBF0;
+font-weight:bold;
+font-size:32px;
+text-shadow:-0.8px 0px 2px #80B0FD,-1.6px 0px 2.5px #5D80B8,-2.4px 0px 2px #2A3A54;
+box-shadow: 0 2px 10px 0 rgba(0,0,0,0.2),0 4px 16px 0 rgba(0,0,0,0.19);
+}
+
+/* CSS */
+.button-29 {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+.button-29:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.button-29:hover {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-29:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+}
+.but:hover{
+background:#1F3F72;
+box-shadow: 0 2px 10px 0 rgba(0,0,0,0.2),0 4px 16px 0 rgba(0,0,0,0.19);
+}
+hr{
+margin:0px;
+}
+.tekst{
+margin:0px 80px;
+font-size:40px;
+color:white;
+text-shadow:-1px 0px 2px #80B0FD,-2px 0px 2.5px #5D80B8,-4px 0px 2px #2A3A54;
+}
+#day{
+margin:10px auto;
+}
+#head{
+background:#4285F4;
+border:2px solid #98CBF0;
+padding:4px;
+}
+</style>
+</head>
+<body>
+<link rel="stylesheet" href="{% static 'styles.css' %}">
+       <a href="/{{ sinf.title }}/{{ sinfnom.nomi }}/Dushanba"><button  type="button" class="button-29">Dushanba</button></a>
+       <a href="/{{ sinf.title }}/{{ sinfnom.nomi }}/Seshanba"><button  type="button" class="button-29">Seshanba</button></a>
+       <a href="/{{ sinf.title }}/{{ sinfnom.nomi }}/Chorshanba"><button  type="button" class="button-29">Chorshanba</button></a>
+       <a href="/{{ sinf.title }}/{{ sinfnom.nomi }}/Payshanba"><button style="margin-left: 20px" type="button" class="button-29">Payshanba</button></a>
+       <a href="/{{ sinf.title }}/{{ sinfnom.nomi }}/Juma"><button  type="button" class="button-29">Juma</button></a>
+       <a href="/{{ sinf.title }}/{{ sinfnom.nomi }}/Shanba"><button  type="button" class="button-29">Shanba</button></a>
+
+<h4 style="text-align: center;margin-top: 10px;margin-bottom: 20px">⬆️Kunni tanlang</h4>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Fanlar</th>
+      <th scope="col">Kirish</th>
+      <th scope="col">Chiqish</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for i in fanlar %}
+    <tr>
+      <th scope="row">1</th>
+      <td><b>{{ i.fan1 }}</b></td>
+      <td>08 : 00</td>
+      <td>08 : 45</td>
+    </tr>
+      <tr>
+      <th scope="row">2</th>
+      <td><b>{{ i.fan2 }}</b></td>
+      <td>08 : 50</td>
+      <td>08 : 35</td>
+     </tr>
+         <tr>
+      <th scope="row">3</th>
+      <td><b>{{ i.fan3 }}</b></td>
+      <td>09 : 40</td>
+      <td>09 : 25</td>
+     </tr>
+         <tr>
+      <th scope="row">4</th>
+      <td><b>{{ i.fan4 }}</b></td>
+      <td>10 : 30</td>
+      <td>11 : 15</td>
+     </tr>
+         <tr>
+      <th scope="row">5</th>
+      <td><b>{{ i.fan5 }}</b></td>
+      <td>11 : 45</td>
+      <td>12 : 25</td>
+     </tr>
+         <tr>
+      <th scope="row">6</th>
+      <td><b>{{ i.fan6 }}</b></td>
+      <td>12 : 30</td>
+      <td>13 : 15</td>
+     </tr>
+  {% endfor %}
+     
+  </tbody>
+</table>
+{% endblock content %}
